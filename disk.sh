@@ -20,8 +20,8 @@ if [ "$FORCE_RUN" = false ]; then
         CURRENT_TIME=$(date +%s)
         TIME_DIFF=$((CURRENT_TIME - LAST_RUN))
         
-        if [ $TIME_DIFF -lt 3600 ]; then
-            echo "The script has already run within the last hour. Use --force"
+        if [ $TIME_DIFF -lt 7200 ]; then
+            echo "The script has already run within the two hours. Use --force"
             exit 0
         fi
     fi
