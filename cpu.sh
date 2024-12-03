@@ -17,7 +17,7 @@ then
     --form-string "priority=0" \
     --form-string "title=High CPU Alert" \
     --form-string "message=$HOSTNAME: $CPU \
-    $(ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -n 11)" \
+    $(ps -eo pid,comm,args,%cpu,%mem --sort=-%cpu | head -n 11)" \
     https://api.pushover.net/1/messages.json
 fi
 
